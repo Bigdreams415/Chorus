@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Crypto Donor Sidebar</title>
+    <link rel="stylesheet" href="App.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <nav id="topNav">
+            <div class="icons">
+                <span id="notificationIcon" class="icon">
+                    <span id="notificationCount">0</span>
+                    &#128276;
+                </span>
+                <span class="icon">&#128172;</span>
+            </div>
+        </nav>
+    </header>
+
+    <!-- Sidebar -->
+    <div id="sidebar" class="active">
+        <span id="closeIcon" onclick="closeSidebar()">&#10006;</span>
+        <nav>
+            <ul>
+                <li><a href="#" id="dashboardLink">Dashboard</a></li>
+                <li><a href="#" id="DonateLink">Donate</a></li>
+                <!-- <li><a href="#" id="applicationLink">Scholarship Application</a></li> -->
+                <li><a href="#" id="profileLink">Profile</a></li>
+                <li><a href="#" id="communityLink">Community</a></li>
+            </ul>            
+        </nav>
+        <div class="logout">
+            <a href="#">&#x2B6F; Logout</a>
+        </div>
+    </div>
+
+    <!-- Hamburger menu icon -->
+    <div id="menuIcon" onclick="openSidebar()">&#9776;</div>
+
+    <!-- Main Content -->
+    <div id="contentWrapper">  
+        <div id="Dashboard" style="display: none;">
+            <div class="Dashboard">
+                <section class="hero-section">
+                    <h1>Empower the Next Generation: Fund a Student's Education with Crypto</h1>
+                    <p>Your cryptocurrency donations make education accessible for underprivileged students</p>
+                    <button class="donate-now-btn">Donate Now</button>
+                </section>
+        
+                <section class="student-profiles">
+                    <!-- First Student Profile -->
+                    <div class="student-card">
+                        <img src="student1.jpg" alt="Nina Macintire">
+                        <h2>Nina Macintire</h2>
+                        <p>Nina is studying computer science and needs $2,000 to cover her tuition</p>
+                        <div class="progress-bar">
+                            <span>$1100</span>
+                            <progress value="1100" max="2000"></progress>
+                            <span>$2000</span>
+                        </div>
+                        <button class="donate-btn">Donate to this student</button>
+                    </div>
+        
+                    <!-- Second Student Profile -->
+                    <div class="student-card">
+                        <img src="student2.jpg" alt="Nina Macintire">
+                        <h2>Nina Macintire</h2>
+                        <p>Nina is studying computer science and needs $2,000 to cover her tuition</p>
+                        <div class="progress-bar">
+                            <span>$1100</span>
+                            <progress value="1100" max="2000"></progress>
+                            <span>$2000</span>
+                        </div>
+                        <button class="donate-btn">Donate to this student</button>
+                    </div>
+                </section>
+            </div>
+        </div>
+
+
+        <div id="Donate" style="display: none;">
+            <div class="Donor-content">
+                <header>
+                    <div class="search-bar">
+                        <input type="text" placeholder="Search">
+                    </div>
+                    <div class="user-icons">
+                        <span class="notifications"></span>
+                        <span class="messages"></span>
+                    </div>
+                </header>
+        
+                <!-- Student Profiles Section -->
+                <section class="student-profiles">
+                    <!-- Student Card -->
+                    <div class="student-card">
+                        <img src="student1.jpg" alt="Student Image">
+                        <h2>Nina Macintire</h2>
+                        <p>Nina is studying computer science and needs $2,000 to cover her tuition</p>
+                        <div class="progress-bar">
+                            <span>$1100</span>
+                            <progress value="1100" max="2000"></progress>
+                            <span>$2000</span>
+                        </div>
+                        <button class="donate-btn">Donate to this student</button>
+                    </div>
+        
+                    <!-- Duplicate the student card multiple times based on the image -->
+                    <div class="student-card">
+                        <img src="student2.jpg" alt="Student Image">
+                        <h2>Nina Macintire</h2>
+                        <p>Nina is studying computer science and needs $2,000 to cover her tuition</p>
+                        <div class="progress-bar">
+                            <span>$1100</span>
+                            <progress value="1100" max="2000"></progress>
+                            <span>$2000</span>
+                        </div>
+                        <button class="donate-btn">Donate to this student</button>
+                    </div>
+        
+                    <div class="student-card">
+                        <img src="student3.jpg" alt="Student Image">
+                        <h2>Nina Macintire</h2>
+                        <p>Nina is studying computer science and needs $2,000 to cover her tuition</p>
+                        <div class="progress-bar">
+                            <span>$1100</span>
+                            <progress value="1100" max="2000"></progress>
+                            <span>$2000</span>
+                        </div>
+                        <button class="donate-btn">Donate to this student</button>
+                    </div>
+        
+                    <!-- Add more cards as necessary -->
+                </section>
+            </div>
+        </div>
+
+        <div id="Profile" style="display: none;">
+            <!-- Profile Section -->
+            <div class="profile-section">
+                <header class="profile-header">
+                    <div class="profile-image">
+                        <img src="images/Frame 15.png" alt="Profile Image">
+                        <span class="edit-icon">✎</span>
+                    </div>
+                    <div class="profile-info">
+                        <h1>Nina Macintire</h1>
+                        <div class="social-icons" id="socialIcons" style="display: none;">
+                            <a href="#"><img src="linkedin-icon.png" alt="LinkedIn"></a>
+                            <a href="#"><img src="twitter-icon.png" alt="Twitter"></a>
+                            <a href="#"><img src="facebook-icon.png" alt="Facebook"></a>
+                        </div>
+                    </div>
+                </header>
+
+                <!-- Contact information section -->
+                <section class="contact-info">
+                    <div class="info-card">
+                        <h2>Email</h2>
+                        <p>mashikur@gmail.com</p>
+                        <h2>Phone</h2>
+                        <p>2348181934961</p>
+                    </div>
+                    <div class="info-card">
+                        <h2>Joining Date</h2>
+                        <p>August 24, 2024</p>
+                        <h2>Location</h2>
+                        <p>Lagos, Nigeria</p>
+                    </div>
+                </section>
+
+                <!-- Education & Skills section -->
+                <section class="education-skills">
+                    <div class="info-card">
+                        <h2>Education</h2>
+                        <ul>
+                            <li>B.Sc in CSE from City University</li>
+                            <li>HSE from City College</li>
+                        </ul>
+                        <span class="edit-icon">✎</span>
+                    </div>
+                    <div class="info-card">
+                        <h2>Skills</h2>
+                        <ul>
+                            <li>PHP</li>
+                            <li>C, C++, Java</li>
+                        </ul>
+                        <span class="edit-icon">✎</span>
+                    </div>
+                </section>
+            </div>
+
+        </div>
+
+
+        
+         
+    </div>
+        
+    
+
+
+    <script src="App.js"></script>
+</body>
+</html>

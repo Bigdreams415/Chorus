@@ -1,0 +1,372 @@
+/* General Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    height: 100vh;
+}
+
+header {
+    background-color: #e61938;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav .icons {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    font-size: 24px;
+    color: white;
+    position: relative;
+}
+
+#notificationCount {
+    background-color: #000;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 3px 6px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: none;
+}
+
+#sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+}
+
+
+#closeIcon {
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 60px;
+}
+
+nav ul li {
+    padding: 15px;
+}
+
+nav ul li.active a {
+    color: #1e8c93;
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 18px;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: #1e8c93;
+}
+
+.logout {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+}
+
+.logout a {
+    font-size: 18px;
+    color: #555;
+    text-decoration: none;
+}
+
+.logout a:hover {
+    color: #1e8c93;
+}
+
+/* Hamburger Menu */
+#menuIcon {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1101;
+    display: none;
+}
+
+/* Sidebar hidden */
+#sidebar.hidden {
+    left: -250px; /* Move sidebar off-screen */
+}
+
+#sidebar.hidden + #menuIcon {
+    display: block;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+
+/* Dashboard section */
+/* Ensure the content wrapper has a transition for smooth shifting */
+#contentWrapper {
+    margin-left: 250px; /* Initially leaves space for the sidebar */
+    transition: margin-left 0.3s ease; /* Smooth transition when sidebar opens/closes */
+    width: calc(100% - 250px); /* Ensure the content takes up the remaining space */
+}
+
+#sidebar.hidden + #contentWrapper {
+    margin-left: 0; /* When sidebar is hidden, content should take full width */
+    width: 100%; /* Full width when the sidebar is hidden */
+}
+
+#sidebar {
+    width: 250px;
+    transition: left 0.3s ease; /* Smooth transition for opening/closing sidebar */
+}
+
+#sidebar.hidden {
+    left: -250px; /* Move sidebar off-screen when hidden */
+}
+
+#menuIcon {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1101;
+    display: none;
+}
+
+#sidebar.hidden + #menuIcon {
+    display: block; /* Show hamburger icon when sidebar is hidden */
+}
+
+ 
+.Dashboard{
+    margin-top: 60px;
+    padding: 20px;
+}
+
+
+
+/* Main content styles */
+.hero-section {
+    background-color: #f04f54;
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.hero-section h1 {
+    font-size: 36px;
+    margin-bottom: 20px;
+}
+
+.hero-section p {
+    font-size: 18px;
+    margin-bottom: 20px;
+}
+
+.donate-now-btn {
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.donate-now-btn:hover {
+    background-color: darkcyan;
+}
+
+/* Student profiles */
+.student-profiles {
+    display: flex;
+    justify-content: space-around;
+    margin-top: 30px;
+}
+
+.student-card {
+    background-color: white;
+    border-radius: 10px;
+    padding: 20px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    width: 30%;
+}
+
+.student-card img {
+    border-radius: 50%;
+    width: 100px;
+    height: 100px;
+    object-fit: cover;
+    margin-bottom: 10px;
+}
+
+.student-card h2 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.student-card p {
+    font-size: 16px;
+    margin-bottom: 20px;
+}
+
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 20px;
+}
+
+progress {
+    width: 100%;
+    margin: 0 10px;
+}
+
+.donate-btn {
+    background-color: teal;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+.donate-btn:hover {
+    background-color: darkcyan;
+}
+
+
+/* Donate Section */
+.Donor-content{
+    margin-top: 60px;
+    padding: 20px;
+}
+
+ 
+
+
+/* Profile Section */
+.profile-section {
+    flex-grow: 1;
+    padding: 30px;
+    margin-top: 100px;
+}
+
+/* Profile header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.profile-header .profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-header .profile-image .edit-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.profile-info {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+/* Contact info & skills section */
+.contact-info, .education-skills {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.info-card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    position: relative;
+}
+
+.info-card h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.info-card .edit-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-card ul li {
+    margin: 5px 0;
+}
+

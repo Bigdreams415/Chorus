@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multi-Step Form with Progress Bar</title>
+    <link rel="stylesheet" href="m.css">
+</head>
+<body>
+    <h2>Let's get you started</h2>
+    <span>Enter the details to get going</span>
+    <!-- Progress Indicator -->
+    <div class="progress-container">
+        <div class="circle active" id="step1">1</div>
+        <span>Personal Information</span>
+        <div class="line"></div>
+        <div class="circle" id="step2">2</div>
+        <span>Educational Details</span>
+        <div class="line"></div>
+        <div class="circle" id="step3">3</div>
+        <span>Funding Information</span>
+        <div class="line"></div>
+        <div class="circle" id="step4">4</div>
+        <span>Supporting Documents</span>
+    </div>
+
+    <!-- Form -->
+    <form id="multiStepForm">
+        <!-- Step 1: Personal Information -->
+        <div class="form-step" id="step-1">
+            <h2>Personal Information</h2>
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Full Name</label>
+                    <input type="text" id="fullName" placeholder="Enter your full name" required>
+                </div>
+
+                <div class="form-field">
+                    <label>Email</label>
+                    <input type="email" id="email" placeholder="Enter your email" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Phone Number</label>
+                    <div class="phone-input">
+                        <select id="countryCode">
+                            <option value="+1">+1</option>
+                            <option value="+44">+44</option>
+                        </select>
+                        <input type="tel" id="phoneNumber" placeholder="Enter your phone number" required>
+                    </div>
+                </div>
+
+                <div class="form-field">
+                    <label>Date of Birth</label>
+                    <input type="date" id="dob" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Nationality</label>
+                    <select id="nationality" required>
+                        <option value="">Select your country</option>
+                        <option value="USA">United States</option>
+                        <option value="Canada">Canada</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label>Gender</label>
+                    <select id="gender" required>
+                        <option value="">Select gender</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="next-btn" onclick="nextStep(1)">Next</button>
+            </div>
+        </div>
+
+        <!-- Step 2: Educational Details -->
+        <div class="form-step" id="step-2" style="display: none;">
+            <h2>Educational Details</h2>
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Current Level of Education</label>
+                    <select id="educationLevel" required>
+                        <option value="">Select your education level</option>
+                        <option value="highschool">High School</option>
+                        <option value="undergraduate">Undergraduate</option>
+                        <option value="graduate">Graduate</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label>School Name</label>
+                    <input type="text" id="schoolName" placeholder="Enter your school name" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Major</label>
+                    <input type="text" id="major" placeholder="Enter your major" required>
+                </div>
+
+                <div class="form-field">
+                    <label>Expected Graduation Date</label>
+                    <input type="date" id="graduationDate" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Proof of Enrolment</label>
+                    <input type="file" id="proofEnrolment" required>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="prev-btn" onclick="prevStep(2)">Back</button>
+                <button type="button" class="next-btn" onclick="nextStep(2)">Save and Continue</button>
+            </div>
+        </div>
+
+        <!-- Step 3: Funding Information -->
+        <div class="form-step" id="step-3" style="display: none;">
+            <h2>Funding Information</h2>
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Funding Needed</label>
+                    <select id="fundingNeeded" required>
+                        <option value="">Select funding needed</option>
+                        <option value="tuition">Tuition</option>
+                        <option value="living">Living Expenses</option>
+                    </select>
+                </div>
+
+                <div class="form-field">
+                    <label>Amount Requested</label>
+                    <input type="number" id="amountRequested" placeholder="Enter amount requested" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Motivational Statement</label>
+                    <textarea id="motivationalStatement" placeholder="Enter your motivational statement" required></textarea>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="prev-btn" onclick="prevStep(3)">Back</button>
+                <button type="button" class="next-btn" onclick="nextStep(3)">Save and Continue</button>
+            </div>
+        </div>
+
+        <!-- Step 4: Supporting Documents -->
+        <div class="form-step" id="step-4" style="display: none;">
+            <h2>Supporting Documents</h2>
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Academic Transcripts</label>
+                    <input type="file" id="academicTranscripts" required>
+                </div>
+
+                <div class="form-field">
+                    <label>Letter of Recommendation</label>
+                    <input type="file" id="letterRecommendation" required>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="form-field">
+                    <label>Personal Statement</label>
+                    <input type="file" id="personalStatement" required>
+                </div>
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="prev-btn" onclick="prevStep(4)">Back</button>
+                <button type="button" class="save-btn" onclick="submitForm()">Save</button>
+            </div>
+        </div>
+
+        <!-- Step 5: Review Part -->
+        <div class="form-step" id="review" style="display: none;">
+            <h2>Review Your Information</h2>
+            <p>Review the information you've provided:</p>
+            <div id="reviewContent">
+                <!-- Review content will be populated here -->
+            </div>
+
+            <div>
+                <input type="checkbox" id="confirmAccuracy" required>
+                <label for="confirmAccuracy">I confirm that the information provided is accurate</label>
+            </div>
+
+            <div class="buttons">
+                <button type="button" class="prev-btn" onclick="prevStep(5)">Back</button>
+                <button type="submit" class="submit-btn">Submit</button>
+            </div>
+        </div>
+    </form>
+
+    <!-- <script src="App.js"></script> -->
+</body>
+</html>

@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donor Dashboard</title>
+    <link rel="stylesheet" href="dp.css">
+</head>
+<body>
+    <!-- Sidebar -->
+    <div class="sidebar">
+        <ul>
+            <li><a href="#">Dashboard</a></li>
+            <li><a href="#" class="active">Donate</a></li>
+            <li><a href="#">Profile</a></li>
+            <li><a href="#">Community</a></li>
+        </ul>
+        <a href="#" class="logout">Logout</a>
+    </div>
+
+    <!-- Main Content -->
+    <div class="Donor-content">
+        <header>
+            <div class="search-bar">
+                <input type="text" placeholder="Search">
+            </div>
+            <div class="user-icons">
+                <span class="notifications"></span>
+                <span class="messages"></span>
+            </div>
+        </header>
+
+        <!-- Student Profiles Section -->
+        <section class="student-profiles">
+            <!-- Student Card -->
+            <div class="student-card">
+                <img src="student1.jpg" alt="Student Image">
+                <h2>Nina Macintire</h2>
+                <p>Nina is studying computer science and needs $2,000 to cover her tuition</p>
+                <div class="progress-bar">
+                    <span>$1100</span>
+                    <progress value="1100" max="2000"></progress>
+                    <span>$2000</span>
+                </div>
+                <button class="donate-btn">Donate to this student</button>
+            </div>
+
+            <!-- Duplicate the student card multiple times based on the image -->
+            <div class="student-card">
+                <img src="student2.jpg" alt="Student Image">
+                <h2>Nina Macintire</h2>
+                <p>Nina is studying computer science and needs $2,000 to cover her tuition</p>
+                <div class="progress-bar">
+                    <span>$1100</span>
+                    <progress value="1100" max="2000"></progress>
+                    <span>$2000</span>
+                </div>
+                <button class="donate-btn">Donate to this student</button>
+            </div>
+
+            <div class="student-card">
+                <img src="student3.jpg" alt="Student Image">
+                <h2>Nina Macintire</h2>
+                <p>Nina is studying computer science and needs $2,000 to cover her tuition</p>
+                <div class="progress-bar">
+                    <span>$1100</span>
+                    <progress value="1100" max="2000"></progress>
+                    <span>$2000</span>
+                </div>
+                <button class="donate-btn">Donate to this student</button>
+            </div>
+
+            <!-- Add more cards as necessary -->
+        </section>
+    </div>
+
+    <script src="dp.js"></script>
+</body>
+</html>

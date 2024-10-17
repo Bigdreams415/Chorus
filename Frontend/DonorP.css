@@ -1,0 +1,247 @@
+/* General styles */
+body {
+    margin: 0;
+    font-family: 'Arial', sans-serif;
+    color: #333;
+}
+
+/* Header styles */
+.header {
+    text-align: center;
+    padding: 20px;
+    display: flex;
+    margin-left: 90px;
+     
+    
+}
+
+.mockup img{
+    width: 60%;
+}
+ 
+
+.hero-details{
+    margin-top: 35px;
+}
+
+.hero-details button{
+    padding-top: 15px;
+}
+.header h1 {
+    font-size: 36px;
+    color: #5e5e5e;
+}
+
+.header h2 {
+    font-size: 32px;
+    color: #222;
+}
+
+.header h2 span {
+    background-color: yellow;
+    padding: 0 10px;
+}
+
+.header p {
+    margin: 20px 0;
+    font-size: 16px;
+}
+
+.donate-btn {
+    background-color: #00a3ff;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.donate-btn:hover {
+    background-color: #008ed4;
+}
+
+/* Hero Section */
+.hero {
+    text-align: center;
+    padding: 20px;
+}
+
+.hero-img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* Scholarship Section */
+.scholarship-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.scholarship-section h3 {
+    font-size: 24px;
+    color: #222;
+}
+
+.scholarship-section p {
+    max-width: 600px;
+    margin: 20px auto;
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+.be-donor-btn {
+    background-color: #ffcc00;
+    color: #222;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.be-donor-btn:hover {
+    background-color: #e6b800;
+}
+
+.team-image{
+    align-items: center;
+    margin-left: 100px;
+}
+
+/* Media Section */
+.media-section {
+    text-align: center;
+    padding: 50px 20px;
+}
+
+.media-logos img {
+    max-width: 100px;
+    margin: 10px;
+}
+
+.stats {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.stats div {
+    text-align: center;
+}
+
+.stats h5 {
+    font-size: 24px;
+    color: #222;
+}
+
+/* CTA Section */
+
+.cta-section {
+    background-image: url('images/image\ 7.png');
+    background-size: cover;  
+    background-position: center;  
+    background-repeat: no-repeat; 
+    padding: 5px;  
+    color: #fff;  
+}
+
+
+.cta-section {
+    text-align: center;
+    padding: 50px 20px;
+    background-color: #f0f8ff;
+}
+
+.cta-section h4 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.apply-btn {
+    background-color: #0066cc;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background-color: #004c99;
+}
+
+.cta-buttons {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+.cta-buttons button {
+    margin: 0 10px;
+    background-color: #ffcc00;
+    color: #222;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 20px;
+    cursor: pointer;
+}
+
+.cta-buttons button:hover {
+    background-color: #e6b800;
+}
+
+/* Footer Section */
+.footer {
+    background-color: rgb(248, 206, 48, 1);
+    padding: 50px 20px;
+    text-align: center;
+}
+
+
+.footer-about h4{
+    text-align: left;
+    margin-left: 100px !important;
+    padding-left: 10px;
+
+}
+.footer-about span{
+     
+}
+.footer-about p {
+    max-width: 400px;
+    margin-left: 90px;
+}
+
+.footer-links div {
+    text-align: left;
+}
+
+.footer-links h5 {
+    margin-bottom: 10px;
+}
+
+.footer-social {
+    margin-top: 20px;
+}
+
+.social-icons a {
+    margin: 0 10px;
+}
+
+.social-icons img {
+    max-width: 30px;
+}
+
+.footer-social p {
+    margin-top: 20px;
+}
+
+.footer-links{
+    display: flex;
+    /* justify-content: space-between; */
+    padding: 15px;
+    margin-left: 15px;
+    gap: 50px;
+    text-align: center;
+    justify-content: space-around;
+    /* align-items: center; */
+}

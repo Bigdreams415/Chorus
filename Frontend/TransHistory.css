@@ -1,0 +1,179 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Arial', sans-serif;
+}
+
+body, html {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    background-color: #f7f7f7;
+}
+
+/* Dashboard container */
+.dashboard-container {
+    display: flex;
+    height: 100vh;
+}
+
+/* Sidebar styling */
+.sidebar {
+    width: 220px;
+    background-color: #eaeaea;
+    padding: 20px;
+}
+
+.sidebar-logo {
+    color: #006666;
+    font-size: 24px;
+    font-weight: bold;
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.sidebar-menu ul {
+    list-style: none;
+}
+
+.sidebar-menu li {
+    margin: 20px 0;
+}
+
+.sidebar-menu a {
+    text-decoration: none;
+    font-size: 18px;
+    color: #333;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sidebar-menu li.active a {
+    color: #006666;
+}
+
+.sidebar-menu .logout a {
+    color: #666;
+    margin-top: 50px;
+    display: block;
+    text-align: center;
+}
+
+/* Main content */
+.main-content {
+    flex-grow: 1;
+    padding: 30px;
+    background-color: #fff;
+}
+
+/* Red bar at the top */
+.header-top .red-bar {
+    height: 60px;
+    background-color: #d50032;
+}
+
+/* Scholarship details */
+.scholarship-details h2 {
+    font-size: 28px;
+    margin-top: 20px;
+    color: #333;
+}
+
+.scholarship-details p {
+    margin-top: 10px;
+    font-size: 16px;
+    color: #666;
+}
+
+.scholarship-info {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.scholarship-info p {
+    margin: 5px 0;
+}
+
+/* Progress bar */
+.progress-bar {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.progress-bar .bar {
+    flex-grow: 1;
+    height: 10px;
+    background-color: #ddd;
+    margin: 0 20px;
+    border-radius: 5px;
+}
+
+.progress-bar .progress {
+    background-color: #6ad06a;
+    height: 100%;
+    border-radius: 5px;
+}
+
+/* Payment history table */
+.payment-history h3 {
+    font-size: 24px;
+    margin: 30px 0;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+}
+
+thead {
+    background-color: #f7f7f7;
+}
+
+thead th {
+    padding: 12px;
+    font-size: 16px;
+    color: #333;
+    border-bottom: 2px solid #ddd;
+}
+
+tbody td {
+    padding: 12px;
+    font-size: 16px;
+    color: #666;
+    border-bottom: 1px solid #ddd;
+}
+
+tbody td a {
+    color: #006666;
+    text-decoration: none;
+}
+
+tbody td a:hover {
+    text-decoration: underline;
+}
+
+/* Filter and sort buttons */
+.filter-sort {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+    margin-bottom: 10px;
+}
+
+.filter-sort button {
+    background-color: #f7f7f7;
+    border: 1px solid #ddd;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.filter-sort button:hover {
+    background-color: #eee;
+}

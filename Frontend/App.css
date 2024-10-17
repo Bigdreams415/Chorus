@@ -1,0 +1,494 @@
+/* General Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background-color: #f8f9fa;
+    display: flex;
+    height: 100vh;
+}
+
+header {
+    background-color: #e61938;
+    height: 60px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    padding-right: 20px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 1000;
+}
+
+nav .icons {
+    display: flex;
+    gap: 20px;
+}
+
+.icon {
+    font-size: 24px;
+    color: white;
+    position: relative;
+}
+
+#notificationCount {
+    background-color: #000;
+    color: white;
+    font-size: 12px;
+    border-radius: 50%;
+    padding: 3px 6px;
+    position: absolute;
+    top: -10px;
+    right: -10px;
+    display: none;
+}
+
+#sidebar {
+    width: 250px;
+    height: 100vh;
+    background-color: #ffffff;
+    position: fixed;
+    top: 0;
+    left: 0;
+    transition: 0.3s ease;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    z-index: 1100;
+}
+
+
+#closeIcon {
+    font-size: 24px;
+    padding: 10px;
+    cursor: pointer;
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    margin-top: 60px;
+}
+
+nav ul li {
+    padding: 15px;
+}
+
+nav ul li.active a {
+    color: #1e8c93;
+    font-weight: bold;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #555;
+    font-size: 18px;
+    display: block;
+}
+
+nav ul li a:hover {
+    color: #1e8c93;
+}
+
+.logout {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    width: calc(100% - 40px);
+}
+
+.logout a {
+    font-size: 18px;
+    color: #555;
+    text-decoration: none;
+}
+
+.logout a:hover {
+    color: #1e8c93;
+}
+
+/* Hamburger Menu */
+#menuIcon {
+    font-size: 30px;
+    cursor: pointer;
+    padding: 10px;
+    position: fixed;
+    top: 10px;
+    left: 10px;
+    z-index: 1101;
+    display: none;
+}
+
+/* Sidebar hidden */
+#sidebar.hidden {
+    left: -250px; /* Move sidebar off-screen */
+}
+
+#sidebar.hidden + #menuIcon {
+    display: block;
+}
+
+h2 {
+    font-size: 24px;
+    margin-bottom: 20px;
+}
+
+.scholarships-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+}
+
+/* Scholarship Card */
+.scholarship-card {
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.scholarship-card img {
+    width: 100%;
+    height: 150px;
+    object-fit: cover;
+}
+
+.scholarship-details {
+    padding: 20px;
+}
+
+.scholarship-details h3 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.scholarship-details p {
+    font-size: 14px;
+    margin-bottom: 20px;
+}
+
+.apply-btn {
+    background-color: #0066cc;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.apply-btn:hover {
+    background-color: #005bb5;
+}
+
+/* Responsive adjustments */
+@media screen and (max-width: 768px) {
+    #sidebar {
+        width: 200px; /* Smaller sidebar for mobile */
+    }
+
+    #contentWrapper {
+        margin-left: 0; /* Main content takes full width initially */
+    }
+
+    #sidebar.hidden + #menuIcon {
+        display: block;
+        position: fixed;
+        top: 10px;
+        left: 10px;
+    }
+}
+
+
+#contentWrapper {
+    transition: margin-left 0.3s ease;
+    margin-left: 0; /* No margin, full width */
+    flex-grow: 1;
+    display: flex;
+    flex-direction: column;
+}
+
+
+#contentWrapper.contracted {
+    margin-left: 250px;  
+}
+
+
+/* CSS code for Multi step form */
+
+/* General styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+.formContainer h2 {
+    margin: 20px 0;
+    color: #444;
+}
+
+/* Progress Bar Styles */
+.formContainer .progress-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.formContainer .circle {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    background-color: #e0e0e0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    color: #fff;
+}
+
+.formContainer .circle.active {
+    background-color: #4caf50; /* Green for active step */
+}
+
+.formContainer .line {
+    height: 2px;
+    background-color: #e0e0e0;
+    flex-grow: 1;
+}
+
+/* Form Container Styles */
+.formContainer {
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    margin-top: 20px;
+}
+
+/* Form Group Styles */
+.formContainer .form-group {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 15px;
+}
+
+.formContainer .form-field {
+    flex: 1;
+    margin-right: 10px;
+}
+
+.formContainer .form-field:last-child {
+    margin-right: 0;
+}
+
+.formContainer label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+}
+
+.formContainer input[type="text"],
+.formContainer input[type="email"],
+.formContainer input[type="tel"],
+.formContainer input[type="date"],
+.formContainer input[type="number"],
+.formContainer select,
+.formContainer textarea {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+/* Button Styles */
+.formContainer .buttons {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+}
+
+.formContainer button {
+    padding: 10px 15px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+}
+
+.formContainer .next-btn {
+    background-color: #4caf50; /* Green for Next */
+    color: #fff;
+}
+
+.formContainer .prev-btn {
+    background-color: #f44336; /* Red for Back */
+    color: #fff;
+}
+
+.formContainer .save-btn {
+    background-color: #2196f3; /* Blue for Save */
+    color: #fff;
+}
+
+.formContainer .submit-btn {
+    background-color: #673ab7; /* Purple for Submit */
+    color: #fff;
+}
+
+/* Button Hover Effects */
+.formContainer button:hover {
+    opacity: 0.9;
+}
+
+
+/* Confirmation page code */
+
+/* Modal Background */
+.confirmation-modal {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000; /* Ensure it's on top of other content */
+}
+
+/* Confirmation Page Styles */
+.confirmation-page {
+    background: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.confirmation-icon img {
+    width: 50px; /* Adjust size as needed */
+    height: 50px;
+    margin-bottom: 15px;
+}
+
+h1 {
+    margin: 10px 0;
+    font-size: 24px;
+}
+
+p {
+    margin: 5px 0;
+    font-size: 16px;
+}
+
+button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    background-color: #4CAF50; /* Green background */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+button:hover {
+    background-color: #45a049; /* Darker green on hover */
+}
+
+
+ 
+
+/* Profile Section */
+.profile-section {
+    flex-grow: 1;
+    padding: 30px;
+    margin-top: 100px;
+}
+
+/* Profile header */
+.profile-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    position: relative;
+}
+
+.profile-header .profile-image img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.profile-header .profile-image .edit-icon {
+    position: absolute;
+    bottom: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.profile-info {
+    flex-grow: 1;
+    margin-left: 20px;
+}
+
+.profile-info h1 {
+    margin: 0;
+    font-size: 24px;
+}
+
+.social-icons a {
+    margin-right: 10px;
+}
+
+/* Contact info & skills section */
+.contact-info, .education-skills {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
+}
+
+.info-card {
+    background-color: #f1f1f1;
+    padding: 20px;
+    border-radius: 10px;
+    width: 45%;
+    position: relative;
+}
+
+.info-card h2 {
+    margin: 0 0 10px;
+    font-size: 18px;
+}
+
+.info-card .edit-icon {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+.info-card ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.info-card ul li {
+    margin: 5px 0;
+}
+
